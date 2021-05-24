@@ -1,0 +1,171 @@
+html
+{
+	background-image: url('Pictures/shattered-island.jpg');
+	scroll-behavior: smooth;
+}
+
+		nav {
+			    margin: -10px -8px;
+			    background-color: #e1d665;
+			    text-align: center;
+			}
+			
+			/* убираем отступы и поля, а также list-style для "ul", 
+			 * и добавляем "position:relative" */
+			nav ul {
+			    padding:0;
+			    margin:0;
+			    list-style: none;
+			    position: relative;
+			    }
+			
+			/* применяем inline-block позиционирование к элементам навигации */
+			nav ul li {
+			    margin: 0px -7px 0 0;
+			    display:inline-block;
+			    background-color: #e1d665;
+			    }
+			
+			/* стилизуем ссылки */
+			nav a {
+			    display:block;
+			    padding:0 15px;
+			    color:#222;
+			    font-size:20px;
+			    line-height: 60px;
+			    text-decoration:none;
+			}
+			
+			/* изменяем цвет фона при наведении курсора */
+			nav a:hover {
+			    background-color: #939343;
+
+		}
+		/* скрываем выпадающие списки по умолчанию
+			 * и задаем абсолютное позиционирование */
+			nav ul ul {
+			    display: none;
+			    position: absolute;
+			    /*top: 100%;*/
+			    transform: translate(-48px,0px);
+			}
+			
+			/* отображаем выпадающий список при наведении */
+			nav ul li:hover > ul {
+			    display:inherit;
+			}
+			
+			/* первый уровень выпадающего списка */
+			nav ul ul li {
+			    min-width:170px;
+			    float:none;
+			    display:list-item;
+			    position: relative;
+			}
+			/* второй уровень выпадающего списка */
+			nav ul ul ul {
+			    position: absolute;
+			    top:0;
+			   	left: 128%;
+		}
+.textmain
+{
+	font-size: 20px;
+	color: white;
+}
+
+.pic
+{
+	/*position: relative;
+	left: 35%;*/
+	height: 300px;
+}
+/* Плитки покупки товаров */
+.product-wrapper {
+	display: block;
+	width: 100%;
+	float: left;
+	transition: width .2s;
+}
+
+@media only screen and (min-width: 450px) {
+	.product-wrapper {
+		width: 50%;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.product-wrapper {
+		width: 33.333%;
+	}
+}
+
+@media only screen and (min-width: 1000px) {
+	.product-wrapper {
+		width: 25%;
+	}
+}
+.product {
+	display: block;
+	border: 1px solid #b5e9a7;
+	border-radius: 3px;
+	position: relative;
+	background: #efce6c;
+	margin: 0 20px 20px 0;
+	text-decoration: none;
+	color: #474747;
+	z-index: 0;
+	height: 300px;
+
+}
+.product-photo {
+	position: relative;
+	padding-bottom: 50%;
+	overflow: hidden;
+}
+.product-photo img {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	max-width: 100%;
+	max-height: 100%;
+	margin: auto;
+	transition: transform .4s ease-out;
+}
+.product:hover .product-photo img {
+	transform: scale(1.05);
+}
+
+/* Описание товара */
+.product p {
+	position: relative;
+	margin: 0;
+	font-size: 1em;
+	line-height: 1.4em;
+	height: 5.6em;
+	overflow: hidden;
+}
+/*.product p:after {
+	content: '';
+	display: inline-block;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 4.2em;
+	height: 1.6em;
+	background: linear-gradient(to left top, #fff, rgba(255, 255, 255, 0));
+}
+*/
+/* Цены */
+.product-price-old b,
+.product-price-old small {
+	color: #888;
+}
+
+div
+{
+	outline: 2px;
+	border-color: re
+}d
